@@ -11,11 +11,11 @@
 
   <div class="ppals-nav">
     <div class="ppals-nav-text">
-      <a href="#"><span class="glyphicon glyphicon-home"></span> Home</a> |
+      <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a> |
       <% if current_user %>
-        <a href="#"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a>
+        <span class="glyphicon glyphicon-user"></span> <%= current_user.username %> | <span class="glyphicon glyphicon-cog"></span> <%= link_to "Settings", '/users/edit' %> | <a href="/users/sign_out" data-method= "delete" ><span  class="glyphicon glyphicon-log-out"></span> Sign Out</a>
       <% else %>
-        <a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign In</a> | <a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+        <a href="/users/sign_in"><span class="glyphicon glyphicon-log-in"></span> Sign In</a> | <a href="/users/sign_up"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
       <% end %>
     </div>
   </div>
