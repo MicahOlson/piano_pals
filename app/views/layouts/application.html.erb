@@ -9,7 +9,22 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <div class="ppals-nav">
+    <div class="ppals-nav-text">
+      <a href="#"><span class="glyphicon glyphicon-home"></span> Home</a> |
+      <% if current_user %>
+        <a href="#"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a>
+      <% else %>
+        <a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign In</a> | <a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+      <% end %>
+    </div>
+  </div>
+
   <body>
-    <%= yield %>
+    <div class="container">
+      <%= flash[:alert] %>
+      <%= flash[:notice] %>
+      <%= yield %>
+    </div>
   </body>
 </html>

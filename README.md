@@ -4,16 +4,7 @@
 
 ## Description
 
-This API allows users to search for parks (state and national parks) within a specific state. Users have full CRUD functionalities for both states and parks.  
-
-The objective of this project is to create a Rails API using RESTful principles, exploring the following topics:
-* Building an API that includes full CRUD functionality and nested routes
-* Successfully returning JSON objects via Postman and cURL
-* Returning headers with the correct HTTP status code
-* Testing APIs with rspec request specs
-* Documenting your API endpoints
-* Handling exceptions when an API call fails
-* CORS is enabled
+kdfjhgkfsdjhgkjdsfhkj
 
 ## Technologies used
 
@@ -89,6 +80,8 @@ $ rspec
 ## License
 > [GPLv3](https://choosealicense.com/licenses/gpl-3.0/)\
 > Mekinsie Callahan &copy; 2021  
+> Micah Olson &copy; 2021  
+> Geof Rosenmund &copy; 2021  
 * * *
 
 ## Contact Information

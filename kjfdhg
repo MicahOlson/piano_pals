@@ -1,0 +1,24 @@
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Flash Chords w/ the Piano Pals</a>
+      </div>
+        <ul class="nav navbar-nav">
+        <li class="active">
+        <li><a href="/">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in?  %>
+          <% if current_user.admin %>
+            <li><a href="/admin"><span class=></span> Admin Panel </a></li>
+          <% end %>
+        <li><a href=""><span class=></span> Signed in as <%= current_user.username %></a></li>
+        <li><a href="/users/sign_out" data-method= "delete" ><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
+        <% end %>
+        <% if !user_signed_in? %>
+        <li><a href="/users/sign_up"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="/users/sign_in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <% end %>
+    </ul>
+  </div>
+</nav> 

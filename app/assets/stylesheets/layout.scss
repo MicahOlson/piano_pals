@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap');
+
+.ppals-nav {
+  background-color: rgb(0, 0, 0);
+  color: white;
+
+  height: 50px;
+  font-family: 'Noto Sans JP', sans-serif;
+    & a {
+    color: white;
+      &:hover {
+        text-decoration: none;
+        color: rgb(129, 129, 129);
+      }
+    }
+  }
+.glyphicon {
+  font-size: smaller;
+  margin: 3px;
+}
+
+.ppals-nav-text {
+  position: relative;
+  top: 10px;
+  text-align: center;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Noto Sans JP', sans-serif;
+}
