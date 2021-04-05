@@ -1,0 +1,9 @@
+<div class="options">
+  <span class="btn">Major Chords</span>
+  <span class="btn">Minor Chords</span>
+</div>
+<div class="chord-text">
+  <% @chords.each do |chord| %>
+    <span class="letter"><%= chord.keynote %></span>
+  <% end %>
+</div>

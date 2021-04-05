@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 .ppals-nav {
   background-color: rgb(0, 0, 0);
   color: white;
-
   height: 50px;
   font-family: 'Noto Sans JP', sans-serif;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  font-size: large;
     & a {
     color: white;
       &:hover {
@@ -29,8 +34,9 @@ body {
   background-color: black;
   color: white;
   font-family: 'Noto Sans JP', sans-serif;
+  margin-bottom: 100px;
+  margin-top: 50px;
 }
-
 .devise_button {
   color: black;
 }
@@ -38,3 +44,38 @@ body {
 input{
   color: black;
 }
+
+.btn {
+  background-color: rgb(168, 168, 168);
+  &:hover {
+    background-color: rgb(216, 216, 216);
+  }
+}
+
+.chord-text {
+  font-family: 'Abril Fatface', cursive;
+  color: rgb(179, 179, 179);
+  font-size: large;
+}
+
+.letter {
+  margin: 15px;
+}
+
+.options {
+  position: relative;
+  margin: 20px;
+}
+
+#logo {
+  height: 100%;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  }
+
+  .center-text {
+    text-align: center;
+  }

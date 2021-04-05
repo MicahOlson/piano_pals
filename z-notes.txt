@@ -1,0 +1,2 @@
+Audio snippet:
+<%= audio_tag("/#{keynote.mode}/#{keynote.audio}", controls: true) %>
