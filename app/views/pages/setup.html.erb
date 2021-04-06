@@ -8,8 +8,8 @@
   <% @chords.each do |chord| %>
     <% if chord.mode == 'Major' %>
       <div class='col-md-3'>
-        <%= check_box_tag(:keynote) %>
-        <%= label_tag(:keynote, chord.keynote) %>
+        <%= check_box_tag(("keynote_".concat("#{chord.id}").to_sym)) %>
+        <%= label_tag(("keynote_".concat("#{chord.id}").to_sym), chord.keynote) %>
       </div>
     <% end %>
   <% end %>
@@ -24,8 +24,8 @@
   <% @chords.each do |chord| %>
     <% if chord.mode == 'minor' %>
       <div class='col-md-3'>
-        <%= check_box_tag(:keynote) %>
-        <%= label_tag(:keynote, chord.keynote) %>
+        <%= check_box_tag("keynote_".concat("#{chord.id}").to_sym) %>
+        <%= label_tag("keynote_".concat("#{chord.id}").to_sym, chord.keynote) %>
       </div>
     <% end %>
   <% end %>
@@ -34,3 +34,18 @@
     <%= label_tag(:all_minor, "Select All", class:"select-all") %>
   </div>
 <hr>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<%# lulz %>
+
+<div class="options">
+  <span class="btn"><%= link_to "Setup Flashcards", "/cards" %></span>
+</div>

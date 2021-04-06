@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
   def setup
     @chords = Keynote.all
+    @keys = 
     render :setup
   end
 
