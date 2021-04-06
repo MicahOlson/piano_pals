@@ -1,5 +1,7 @@
 
 <p>Select which keys you would like flash cards for:</p>
+<%= check_box_tag(:all_keys) %>
+<%= label_tag(:all_keys, "Select All Keys") %>
 <hr>
 <div class='row'>
   <h2 class="mode-heading"><strong>Major</strong></h2>
@@ -7,21 +9,28 @@
     <% if chord.mode == 'Major' %>
       <div class='col-md-3'>
         <%= check_box_tag(:keynote) %>
-        <%= label_tag(:keynote, "#{chord.keynote}") %>
+        <%= label_tag(:keynote, chord.keynote) %>
       </div>
     <% end %>
   <% end %>
+  <div class='col-md-3'>
+    <%= check_box_tag(:all_major) %>
+    <%= label_tag(:all_major, "Select All", class:"select-all") %>
+  </div>
 </div>
 <hr>
 <div class='row'>
   <h2 class="mode-heading"><strong>Minor</strong></h2>
   <% @chords.each do |chord| %>
     <% if chord.mode == 'minor' %>
-    <div class='col-md-3'>
-      <%= check_box_tag(:keynote) %>
-      <%= label_tag(:keynote, "#{chord.keynote}") %>
-    </div>
+      <div class='col-md-3'>
+        <%= check_box_tag(:keynote) %>
+        <%= label_tag(:keynote, chord.keynote) %>
+      </div>
     <% end %>
   <% end %>
-</div>
+  <div class='col-md-3'>
+    <%= check_box_tag(:all_minor) %>
+    <%= label_tag(:all_minor, "Select All", class:"select-all") %>
+  </div>
 <hr>

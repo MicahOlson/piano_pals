@@ -1,0 +1,68 @@
+<%# <div class="wrapper">
+  <div class="carousel">
+  </div>
+  <button class="prev">Prev</button>
+  <button class="next">Next</button>
+</div> %>
+
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+    <div class="flip-card-back">
+      <img src="/assets/major/a-flat-maj.png" alt="a flat major" style="width:300px;">
+      <%= audio_tag("/audios/major/a-flat-maj.mp3", controls: true) %>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    <div class="item">
+
+
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h1>John Doe</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+    <div class="flip-card-back">
+      <img src="/assets/major/a-flat-maj.png" alt="a flat major" style="width:300px;">
+      <%= audio_tag("/audios/major/a-flat-maj.mp3", controls: true) %>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+
+
+<%= link_to "Back", "/setup" %>

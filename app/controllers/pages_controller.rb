@@ -10,8 +10,8 @@ class PagesController < ApplicationController
   end
 
   def cards
-    @chords = Keynote.find(params[:keynote])
-    @refined_chords = @chords.find(params[:mode])
+    # @chords = Keynote.find(params[:keynote])
+    # @refined_chords = @chords.find(params[:mode])
     render :cards
   end
 end
