@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'rb-readline'
 gem 'bootstrap-sass', '~> 3.4.1'
 
 # Use Capistrano for deployment

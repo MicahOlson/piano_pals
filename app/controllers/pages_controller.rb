@@ -5,13 +5,12 @@ class PagesController < ApplicationController
   end
 
   def setup
-    @chords = Keynote.all
-    @keys = 
+    @keynotes = Keynote.all
     render :setup
   end
 
   def cards
-    # @chords = Keynote.find(params[:keynote])
+    # @selected_keys = @keynotes.find(params[:keynote[id]])
     # @refined_chords = @chords.find(params[:mode])
     render :cards
   end

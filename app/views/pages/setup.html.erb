@@ -1,40 +1,43 @@
 
 <p>Select which keys you would like flash cards for:</p>
-<%= check_box_tag(:all_keys) %>
-<%= label_tag(:all_keys, "Select All Keys") %>
-<hr>
-<div class='row'>
-  <h2 class="mode-heading"><strong>Major</strong></h2>
-  <% @chords.each do |chord| %>
-    <% if chord.mode == 'Major' %>
-      <div class='col-md-3'>
-        <%= check_box_tag(("keynote_".concat("#{chord.id}").to_sym)) %>
-        <%= label_tag(("keynote_".concat("#{chord.id}").to_sym), chord.keynote) %>
-      </div>
-    <% end %>
-  <% end %>
-  <div class='col-md-3'>
-    <%= check_box_tag(:all_major) %>
-    <%= label_tag(:all_major, "Select All", class:"select-all") %>
-  </div>
-</div>
-<hr>
-<div class='row'>
-  <h2 class="mode-heading"><strong>Minor</strong></h2>
-  <% @chords.each do |chord| %>
-    <% if chord.mode == 'minor' %>
-      <div class='col-md-3'>
-        <%= check_box_tag("keynote_".concat("#{chord.id}").to_sym) %>
-        <%= label_tag("keynote_".concat("#{chord.id}").to_sym, chord.keynote) %>
-      </div>
-    <% end %>
-  <% end %>
-  <div class='col-md-3'>
-    <%= check_box_tag(:all_minor) %>
-    <%= label_tag(:all_minor, "Select All", class:"select-all") %>
-  </div>
-<hr>
 
+<%= form_tag cards_path, :method => 'get' do %>
+  <%= check_box_tag(:all_keys) %>
+  <%= label_tag(:all_keys, "Select All Keys") %>
+  <hr>
+  <div class='row'>
+    <h2 class="mode-heading"><strong>Major</strong></h2>
+    <% @keynotes.each do |keynote| %>
+      <% if keynote.mode == 'Major' %>
+        <div class='col-md-3'>
+          <%= check_box_tag(("keynote_".concat("#{keynote.id}").to_sym)) %>
+          <%= label_tag(("keynote_".concat("#{keynote.id}").to_sym), keynote.keynote) %>
+        </div>
+      <% end %>
+    <% end %>
+    <div class='col-md-3'>
+      <%= check_box_tag(:all_major) %>
+      <%= label_tag(:all_major, "Select All", class:"select-all") %>
+    </div>
+  </div>
+  <hr>
+  <div class='row'>
+    <h2 class="mode-heading"><strong>Minor</strong></h2>
+    <% @keynotes.each do |keynote| %>
+      <% if keynote.mode == 'minor' %>
+        <div class='col-md-3'>
+          <%= check_box_tag("keynote_".concat("#{keynote.id}").to_sym) %>
+          <%= label_tag("keynote_".concat("#{keynote.id}").to_sym, keynote.keynote) %>
+        </div>
+      <% end %>
+    <% end %>
+    <div class='col-md-3'>
+      <%= check_box_tag(:all_minor) %>
+      <%= label_tag(:all_minor, "Select All", class:"select-all") %>
+    </div>
+  <hr>
+  <%= submit_tag "go!" %>
+<% end %>
 <br>
 <br>
 <br>
@@ -46,6 +49,8 @@
 
 <%# lulz %>
 
+<% @selected_keys = params %>
+
 <div class="options">
-  <span class="btn"><%= link_to "Setup Flashcards", "/cards" %></span>
+  <%= link_to "Setup Flashcards", cards_path %>
 </div>

@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get '/setup', to: 'pages#setup'
+  # match '/cards' => 'pages#cards', via: :post
+  # match '/cards' => 'pages#cards', via: :get
   get '/cards', to: 'pages#cards'
   resources :keynotes
+
 end
