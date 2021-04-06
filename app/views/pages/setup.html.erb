@@ -10,8 +10,8 @@
     <% @keynotes.each do |keynote| %>
       <% if keynote.mode == 'Major' %>
         <div class='col-md-3'>
-          <%= check_box_tag(("keynote_".concat("#{keynote.id}").to_sym)) %>
-          <%= label_tag(("keynote_".concat("#{keynote.id}").to_sym), keynote.keynote) %>
+          <%= check_box_tag("#{keynote.id}".to_sym, "#{keynote.keynote} #{keynote.mode}") %>
+          <%= label_tag(("#{keynote.id}".to_sym), keynote.keynote) %>
         </div>
       <% end %>
     <% end %>
@@ -26,8 +26,8 @@
     <% @keynotes.each do |keynote| %>
       <% if keynote.mode == 'minor' %>
         <div class='col-md-3'>
-          <%= check_box_tag("keynote_".concat("#{keynote.id}").to_sym) %>
-          <%= label_tag("keynote_".concat("#{keynote.id}").to_sym, keynote.keynote) %>
+          <%= check_box_tag("#{keynote.id}".to_sym, "#{keynote.keynote} #{keynote.mode}") %>
+          <%= label_tag("#{keynote.id}".to_sym, keynote.keynote) %>
         </div>
       <% end %>
     <% end %>
@@ -35,22 +35,7 @@
       <%= check_box_tag(:all_minor) %>
       <%= label_tag(:all_minor, "Select All", class:"select-all") %>
     </div>
+  </div> 
   <hr>
-  <%= submit_tag "go!" %>
+    <%= submit_tag "Create Flashcards", class: "btn" %>
 <% end %>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<%# lulz %>
-
-<% @selected_keys = params %>
-
-<div class="options">
-  <%= link_to "Setup Flashcards", cards_path %>
-</div>

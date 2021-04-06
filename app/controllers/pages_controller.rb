@@ -10,8 +10,7 @@ class PagesController < ApplicationController
   end
 
   def cards
-    # @selected_keys = @keynotes.find(params[:keynote[id]])
-    # @refined_chords = @chords.find(params[:mode])
+    @selected_keys = params.values[1..-4]
     render :cards
   end
 end
