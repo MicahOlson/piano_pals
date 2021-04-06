@@ -2,7 +2,7 @@
 <p>Select which keys you would like flash cards for:</p>
 
 <%= form_tag cards_path, :method => 'get' do %>
-  <%= check_box_tag(:all_keys) %>
+  <%= check_box_tag(:all_keys, "all_keys") %>
   <%= label_tag(:all_keys, "Select All Keys") %>
   <hr>
   <div class='row'>
@@ -16,7 +16,7 @@
       <% end %>
     <% end %>
     <div class='col-md-3'>
-      <%= check_box_tag(:all_major) %>
+      <%= check_box_tag(:all_major, "all_major") %>
       <%= label_tag(:all_major, "Select All", class:"select-all") %>
     </div>
   </div>
@@ -32,7 +32,7 @@
       <% end %>
     <% end %>
     <div class='col-md-3'>
-      <%= check_box_tag(:all_minor) %>
+      <%= check_box_tag(:all_minor, "all_minor") %>
       <%= label_tag(:all_minor, "Select All", class:"select-all") %>
     </div>
   </div> 

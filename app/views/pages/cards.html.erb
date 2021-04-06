@@ -5,55 +5,55 @@
   <button class="next">Next</button>
 </div> %>
 
-
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <% @display_keys.length.times do |i| %>
+      <li data-target="#carousel-example-generic" data-slide-to=<% i.to_s %>></li>
+    <% end %>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-
-
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <h1>John Doe</h1>
-      <p>Architect & Engineer</p>
-      <p>We love that guy</p>
-    </div>
-    <div class="flip-card-back">
-      <img src="/assets/major/a-flat-maj.png" alt="a flat major" style="width:300px;">
-      <%= audio_tag("/audios/major/a-flat-maj.mp3", controls: true) %>
-    </div>
-  </div>
-</div>
-
-
-    </div>
-    <div class="item">
-
-
       <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <h1>John Doe</h1>
-      <p>Architect & Engineer</p>
-      <p>We love that guy</p>
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h1>WELCOME TO THE CARDS!</h1>
+            <p>Click an arrow to start</p>
+            <p>We love youuuuuuuuuu</p>
+          </div>
+          <div class="flip-card-back">
+            <p> Finger positions and audio samples on the backs of each card! </p>
+            <img src="/assets/major/a-flat-maj.png" alt="a flat major" style="width:300px;">
+            <%= audio_tag("/audios/major/a-flat-maj.mp3", controls: true) %>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="flip-card-back">
-      <img src="/assets/major/a-flat-maj.png" alt="a flat major" style="width:300px;">
-      <%= audio_tag("/audios/major/a-flat-maj.mp3", controls: true) %>
-    </div>
-  </div>
+
+
+  <% if @display_keys %>
+    <% @display_keys.each do |keynote| %>
+      <div class="item">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1><%= "#{keynote.keynote} #{keynote.mode}" %></h1>
+            </div>
+            <div class="flip-card-back">
+              <%= image_tag "/assets/#{keynote.mode.downcase}/#{keynote.image}" %>
+              <%= audio_tag("/audios/#{keynote.mode.downcase}/#{keynote.audio}"), controls: true %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+
 </div>
 
-    </div>
-  </div>
 
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -63,7 +63,5 @@
     <span class="glyphicon glyphicon-chevron-right"></span>
   </a>
 </div>
-
-<%= @selected_keys %>
 
 <%= link_to "Back", "/setup" %>

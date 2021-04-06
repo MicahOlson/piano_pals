@@ -1,3 +1,5 @@
+<img src= <%= "/assets/#{keynote.mode.downcase}/#{keynote.image}" %> alt="keyboard fingering" style="width:300px;">
+
 Audio snippet:
 <%= audio_tag("/#{keynote.mode}/#{keynote.audio}", controls: true) %>
 
@@ -32,7 +34,15 @@ $('#major').on('click', function() {
 
 
 
-
+if allkeys
+  chords = Keynote.all
+else if
+  majchords = major.all
+  minchords = minor.all
+  chk = check_boxes
+  majchords.append(minchords,chk)
+end
+majchords.unique
 
 
 
