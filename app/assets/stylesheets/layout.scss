@@ -15,10 +15,11 @@
     color: white;
       &:hover {
         text-decoration: none;
-        color: rgb(129, 129, 129);
+        color: rgb(179, 179, 179);
       }
     }
   }
+
 .glyphicon {
   font-size: smaller;
   margin: 3px;
@@ -37,6 +38,7 @@ body {
   margin-bottom: 100px;
   margin-top: 50px;
 }
+
 .devise_button {
   color: black;
 }
@@ -47,24 +49,29 @@ input{
 
 .btn {
   background-color: rgb(168, 168, 168);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 300px;
+  font-size: 30px;
   &:hover {
     background-color: rgb(216, 216, 216);
   }
 }
 
-.chord-text {
-  font-family: 'Abril Fatface', cursive;
-  color: rgb(179, 179, 179);
-  font-size: large;
-}
-
 .letter {
   margin: 15px;
+  font-family: 'Abril Fatface', cursive;
 }
 
-.options {
-  position: relative;
-  margin: 20px;
+a {
+  text-decoration: none;
+  color:white;
+  &:hover {
+    color: grey;
+    text-decoration: none;
+  }
 }
 
 #logo {
@@ -74,8 +81,34 @@ input{
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
-  }
+}
 
-  .center-text {
-    text-align: center;
-  }
+.center-text {
+  text-align: center;
+}
+
+input[type="checkbox"]{
+  width: 20px;
+  height: 20px;
+}
+
+label {
+  margin-right: 20px;
+  font-family: 'Abril Fatface', cursive;
+  text-decoration: none;
+  font-weight: lighter;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+}
+
+.row {
+  margin-left: 100px;
+}
+
+.mode-heading {
+  margin-top: 0px;
+}
+
+hr {
+  border-top: 1px solid #cbcccc;
+}

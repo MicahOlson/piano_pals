@@ -1,0 +1,27 @@
+
+<p>Select which keys you would like flash cards for:</p>
+<hr>
+<div class='row'>
+  <h2 class="mode-heading"><strong>Major</strong></h2>
+  <% @chords.each do |chord| %>
+    <% if chord.mode == 'Major' %>
+      <div class='col-md-3'>
+        <%= check_box_tag(:keynote) %>
+        <%= label_tag(:keynote, "#{chord.keynote}") %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<hr>
+<div class='row'>
+  <h2 class="mode-heading"><strong>Minor</strong></h2>
+  <% @chords.each do |chord| %>
+    <% if chord.mode == 'minor' %>
+    <div class='col-md-3'>
+      <%= check_box_tag(:keynote) %>
+      <%= label_tag(:keynote, "#{chord.keynote}") %>
+    </div>
+    <% end %>
+  <% end %>
+</div>
+<hr>

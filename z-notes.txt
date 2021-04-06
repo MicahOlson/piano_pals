@@ -1,2 +1,13 @@
 Audio snippet:
 <%= audio_tag("/#{keynote.mode}/#{keynote.audio}", controls: true) %>
+
+
+<script type='text/javascript'>
+$('#major').on('click', function() {
+  @chords.forEach (
+    if chord.mode = 'Major' (
+      $("input[type='checkbox']").click();
+    )
+  )
+})
+</script>
