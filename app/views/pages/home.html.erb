@@ -4,9 +4,9 @@
   <p>Practice learning piano chords with our flashcard tool. You can customize your flashcard set to any chords you want.</p>
 <%# 
   <p>To customize your flashcards, click "Setup Flashcards" to get started.</p> %>
-  <br>
+  <%# <br>
   <h2><strong>Something Cool or yeah</strong></h2>
-  <p>kjsdhgdksjfhgdfksjg</p>
+  <p>kjsdhgdksjfhgdfksjg</p> %>
 </div>
 
 <div class="options">
@@ -14,7 +14,7 @@
 </div>
 
 
-<h2 class="center-text" style="margin-top: 80px"><strong> Chord of the Day </strong></h2>
+<h2 class="center-text" style="margin-top: 80px"><strong> P R E V I E W </strong></h2>
   <% randumber = rand(1..Keynote.all.length) %>
   <% keynote = Keynote.find(randumber.to_i) %>
       <div class="flip-card" style="margin-top: 0px">
@@ -28,3 +28,11 @@
           </div>
         </div>
       </div>  
+<div id="home-footer" class="center-text">
+  <p>©2021 Piano Pals</p>
+  <p>
+    <a href="https://github.com/mekinsie">Mekinsie Callahan</a> |
+    <a href="https://github.com/MicahOlson">Micah Olson</a> |
+    <a href="https://github.com/CrankyJones">Geof Rosenmund</a>
+  </p>
+</div>

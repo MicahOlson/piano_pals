@@ -19,13 +19,13 @@
     <div class="item active">
       <div class="flip-card">
         <div class="flip-card-inner">
-          <div class="flip-card-front">
+          <div class="flip-card-front" style="padding-top: 120px">
             <h1>F L A S H   C H O R D S</h1>
             <p>Click either arrows to navigate between cards</p>
             <p>Hover your mouse over the card to flip it</p>
           </div>
-          <div class="flip-card-back">
-            <p> Finger positions and audio samples on the backs of each card! </p>
+          <div class="flip-card-back" style="padding-top: 40px">
+            <p> Finger positions and audio samples are on the backs of each card </p>
             <%= image_tag "/assets/major/a-flat-maj.png" %>
             <%= audio_tag("/audios/major/a-flat-maj.mp3", controls: true) %>
           </div>
@@ -66,6 +66,17 @@
   </a>
 </div>
 
-<div class="push-btn">
-  <%= link_to "Back to Setup", "/setup", class:"back-btn" %>
+  <div class="push-btn">
+    <%= link_to "Back to Setup", "/setup", class:"back-btn" %>
+  </div>
+
 </div>
+
+<footer>
+  <p>©2021 Piano Pals</p>
+    <p>
+    <a href="https://github.com/mekinsie">Mekinsie Callahan</a> |
+    <a href="https://github.com/MicahOlson">Micah Olson</a> |
+    <a href="https://github.com/CrankyJones">Geof Rosenmund</a>
+  </p>
+</footer>
