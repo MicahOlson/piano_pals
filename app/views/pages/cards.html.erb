@@ -20,13 +20,13 @@
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <h1>WELCOME TO THE CARDS!</h1>
-            <p>Click an arrow to start</p>
-            <p>We love youuuuuuuuuu</p>
+            <h1>F L A S H   C H O R D S</h1>
+            <p>Click either arrows to navigate between cards</p>
+            <p>Hover your mouse over the card to flip it</p>
           </div>
           <div class="flip-card-back">
             <p> Finger positions and audio samples on the backs of each card! </p>
-            <img src="/assets/major/a-flat-maj.png" alt="a flat major" style="width:300px;">
+            <%= image_tag "/assets/major/a-flat-maj.png" %>
             <%= audio_tag("/audios/major/a-flat-maj.mp3", controls: true) %>
           </div>
         </div>
@@ -35,6 +35,9 @@
 
 
   <% if @display_keys %>
+    <% if @selected_keys.include?('all_randomize') %>
+      <% @display_keys.shuffle! %>
+    <% end %>
     <% @display_keys.each do |keynote| %>
       <div class="item">
         <div class="flip-card">
@@ -44,15 +47,14 @@
             </div>
             <div class="flip-card-back">
               <%= image_tag "/assets/#{keynote.mode.downcase}/#{keynote.image}" %>
-              <%= audio_tag("/audios/#{keynote.mode.downcase}/#{keynote.audio}"), controls: true %>
+              <%= audio_tag("/audios/#{keynote.mode.downcase}/#{keynote.audio}", controls: true)%>
             </div>
           </div>
         </div>
       </div>
     <% end %>
   <% end %>
-
-</div>
+  </div>
 
 
   <!-- Controls -->
@@ -64,4 +66,6 @@
   </a>
 </div>
 
-<%= link_to "Back", "/setup" %>
+<div class="push-btn">
+  <%= link_to "Back to Setup", "/setup", class:"back-btn" %>
+</div>

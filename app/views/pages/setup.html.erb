@@ -4,6 +4,8 @@
 <%= form_tag cards_path, :method => 'get' do %>
   <%= check_box_tag(:all_keys, "all_keys") %>
   <%= label_tag(:all_keys, "Select All Keys") %>
+  <%= check_box_tag(:all_randomize, "all_randomize") %>
+  <%= label_tag(:all_randomize, "Randomize Flash Cards") %>
   <hr>
   <div class='row'>
     <h2 class="mode-heading"><strong>Major</strong></h2>
