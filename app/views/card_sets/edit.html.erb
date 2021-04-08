@@ -1,20 +1,15 @@
 <div style= "margin-top: 40px;">
 <h1> Edit Card Set</h1>
-  <%= form_tag edit_card_set_path, :method => 'post' do %>
+  <%= form_tag card_set_path, :method => 'patch' do %>
+  <%= render "layouts/card_sets_form"%>
+    <%= label_tag(:set_name, "Set Name:") %>
+    <%= text_field_tag(:set_name, @card_set.set_name) %>
+    <hr>
+    <%= submit_tag "Update Set", class: "btn" %>
+    <% end %>
 
-<%= render "layouts/card_sets_form"%>
-
-<%= submit_tag "Edit Set", class: "btn" %>
-  <% end %>
-  </div>
+  <%= link_to "Delete", card_set_path(@card_set), data: { method: "delete" } %>
 </div>
-
-<%if @card_set.id %>
-  <p><%= link_to "Delete Card Set", card_set_path(@card_set),
-                        :data => {:confirm => "Are you sure?",
-                                       :method => "delete"} %></p>
-<% end %>
-
 
 <footer class="footer">
   <p>©2021 Piano Pals</p>

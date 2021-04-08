@@ -1,5 +1,4 @@
-<h1><%= @card_set.set_name %> </h1>
-
+<h1><%= @card_set.set_name %></h1>
 <h2>Keys:</h2>
 <% if @keynotes_array.any? %>
   <% @keynotes_array.each do |keynote| %>
@@ -9,8 +8,7 @@
   <p>There are no keys saved to this set.</p>
 <% end %>
 
-
-<>
+<a href="#" class="btn">Go to flash cards</a>
 
 <footer class="footer">
   <p>©2021 Piano Pals</p>

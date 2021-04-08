@@ -9,7 +9,11 @@
       <% @keynotes.each do |keynote| %>
         <% if keynote.mode == 'Major' %>
           <div class='col-md-3'>
-            <%= check_box_tag("#{keynote.id}".to_sym, "#{keynote.keynote} #{keynote.mode}") %>
+            <% if @id_array && @id_array.include?(keynote.id.to_s) %>
+              <%= check_box_tag("#{keynote.id}".to_sym, '', true) %>
+            <% else %>
+              <%= check_box_tag("#{keynote.id}".to_sym) %>
+            <% end %>
             <%= label_tag(("#{keynote.id}".to_sym), keynote.keynote) %>
           </div>
         <% end %>
@@ -25,8 +29,12 @@
       <% @keynotes.each do |keynote| %>
         <% if keynote.mode == 'minor' %>
           <div class='col-md-3'>
-            <%= check_box_tag("#{keynote.id}".to_sym, "#{keynote.keynote} #{keynote.mode}") %>
-            <%= label_tag("#{keynote.id}".to_sym, keynote.keynote) %>
+            <% if @id_array && @id_array.include?(keynote.id.to_s) %>
+              <%= check_box_tag("#{keynote.id}".to_sym, '', true) %>
+            <% else %>
+              <%= check_box_tag("#{keynote.id}".to_sym) %>
+            <% end %>
+            <%= label_tag(("#{keynote.id}".to_sym), keynote.keynote) %>
           </div>
         <% end %>
       <% end %>
