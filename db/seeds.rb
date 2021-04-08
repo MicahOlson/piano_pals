@@ -1,7 +1,6 @@
 require 'faker'
 
 Keynote.destroy_all
-User.destroy_all
 
 chords = [
   {keynote: 'C',  mode: 'Major', image: 'c-maj.png',       audio: 'c-maj.mp3'},
@@ -40,11 +39,4 @@ chords.each do |chord|
   Keynote.create!(keynote: chord[:keynote], mode: chord[:mode], image: chord[:image], audio: chord[:audio])
 end
 
-User.create!(email: "test@test.com", password: "test123", username: "Test")
-10.times do
-  username = Faker::FunnyName.unique.name
-  User.create!(email: "#{username.gsub(/\W/, '')}@flashchords.com", password: "password", username: username)
-end
-
 p "Created #{Keynote.count} keynotes."
-p "Created #{User.count} users."

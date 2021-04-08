@@ -81,8 +81,6 @@ class CardSetsController < ApplicationController
     @card_set = CardSet.find(params[:id])
     @id_array = @card_set.set.split(",")
     @random = @id_array.pop
-
-
     render :edit
   end
 

@@ -2,26 +2,29 @@
 
 ### Authored by: Mekinsie Callahan, Micah Olson, Geof Rosenmund
 
+* * *
+
 ## Description
 
-kdfjhgkfsdjhgkjdsfhkj
+Flash Chords is a web application where you can learn piano chords through the use of flash cards. Sign up to save and customize your own flashcard sets. 
+
+* * *
 
 ## Technologies used
 
 * HTML
 * Bootstrap
-* CSS
+* Sass
 * git
 * Ruby on Rails
 * Embedded Ruby (ERB)
 * RSpec
 * Bundler
 * PostgreSQL
+* Devise
 
 * * *
-## Authentication
-This services does not require any authentication. CORS is also enabled.
-* * *
+
 ## Software Requirements
 * **Ruby is required to run this application**
 * **PostgreSQL is required to run the database**  
@@ -29,19 +32,21 @@ This services does not require any authentication. CORS is also enabled.
  <a href="https://www.learnhowtoprogram.com/ruby-and-rails/getting-started-with-ruby/installing-ruby">Ruby download instructions</a>  
   <a href="https://www.learnhowtoprogram.com/ruby-and-rails/getting-started-with-ruby/installing-postgres">PosgreSQL download instructions</a>  
 
+* * *
+
 ## Installation Instructions
 1. Navigate to the desired directory where you would like to clone the project to.
 
-2. Once you have chosen your desired directory, clone the github repo using the version control tool `git` (<a href="https://www.learnhowtoprogram.com/introduction-to-programming/getting-started-with-intro-to-programming/git-and-github">download instructions</a>). Typing the following command into your terminal:
+2. Once you have chosen your desired directory, clone the github repo using the version control tool `git` (<a href="https://www.learnhowtoprogram.com/introduction-to-programming/getting-started-with-intro-to-programming/git-and-github">download instructions</a>). Type the following command into your terminal:
 ```bash
-$ git clone https://github.com/mekinsie/gathered_analysis
+$ git clone https://github.com/CrankyJones/piano_pals.git
 ```
 3. Open the project in VSCode by typing the following in your terminal:
 
 ``` bash
 $ code .
 ```
-* Note: VSCode is a code editing software. If you don't already have it, you can download it <a href="https://code.visualstudio.com/">here</a>
+_**Note:** VSCode is a code editing software. If you don't already have it, you can download it <a href="https://code.visualstudio.com/">here</a>_
 
 4. While located in the root directy, install gem bundler by typing:
 
@@ -65,18 +70,22 @@ The database should now be correctly set up. And you may start a local server to
 ```
 $ rails s
 ```
-Now that the server is running, you may make successfully make API calls.
+8. Open your default browser and type "localhost:3000" into the search bar and press enter. Here, you will see the live server.
+
 * * *
 ## Running Tests
 * This application was created using test-driven development (TDD).
-* To run the tests yourself, follow the steps below.
 
 Simply type "rspec" into your terminal while located in the root directory of the project.
 ``` bash
 $ rspec
 ```
 * * *
+## Database Layout:
 
+![Database Layout](/piano_pals_schema.PNG)
+
+* * * 
 ## License
 > [GPLv3](https://choosealicense.com/licenses/gpl-3.0/)\
 > Mekinsie Callahan &copy; 2021  

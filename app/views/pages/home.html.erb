@@ -1,27 +1,26 @@
 <img src="/assets/logo.png" height="150" alt="logo" id="logo">
 <div class="center-text">
-<hr>
-  <p>Practice learning piano chords with our flashcard tool. Sign in to create and customize your own flashcard sets.</p>
+  <hr>
+    <p>Practice learning piano chords with our flashcard tool. Sign in to create and customize your own flashcard sets.</p>
 </div>
-
 <div class="options">
   <span class="btn"><%= link_to "Setup Flashcards", "/setup" %></span>
 </div>
 
 <h2 class="center-text" style="margin-top: 80px"><strong> P R E V I E W </strong></h2>
-  <% randumber = rand(1..Keynote.all.length) %>
-  <% keynote = Keynote.find(randumber.to_i) %>
-      <div class="flip-card" style="margin-top: 0px">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <h1><%= "#{keynote.keynote} #{keynote.mode}" %></h1>
-          </div>
-          <div class="flip-card-back">
-            <%= image_tag "/assets/#{keynote.mode.downcase}/#{keynote.image}" %>
-            <%= audio_tag("/audios/#{keynote.mode.downcase}/#{keynote.audio}", controls: true)%>
-          </div>
-        </div>
-      </div>  
+<% randumber = rand(1..Keynote.all.length) %>
+<% keynote = Keynote.find(randumber.to_i) %>
+<div class="flip-card" style="margin-top: 0px">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h1><%= "#{keynote.keynote} #{keynote.mode}" %></h1>
+    </div>
+    <div class="flip-card-back">
+      <%= image_tag "/assets/#{keynote.mode.downcase}/#{keynote.image}" %>
+      <%= audio_tag("/audios/#{keynote.mode.downcase}/#{keynote.audio}", controls: true)%>
+    </div>
+  </div>
+</div>
 
 <div id="home-footer" class="center-text">
   <p>©2021 Piano Pals</p>

@@ -1,9 +1,8 @@
 <div style= "margin-top: 40px;">
   <p>Select which keys you would like flash cards for:</p>
-
-    <%= form_tag cards_path, :method => 'get' do %>
-    <%= render "layouts/card_sets_form"%>
-    <%= submit_tag "Create Flashcards", class: "btn" %>
+  <%= form_tag cards_path, :method => 'get' do %>
+  <%= render "layouts/card_sets_form"%>
+  <%= submit_tag "Create Flashcards", class: "btn" %>
   <% end %>
   </div>
 </div>

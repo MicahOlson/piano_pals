@@ -1,50 +1,49 @@
-
-    <%= check_box_tag(:all_keys, "all_keys") %>
-    <%= label_tag(:all_keys, "Select All Keys") %>
-    <% if @random && @random == "T"  %>
-        <%= check_box_tag(:all_randomize, "all_randomize", true) %>
-      <% else %>
-        <%= check_box_tag(:all_randomize, "all_randomize") %>
+<%= check_box_tag(:all_keys, "all_keys") %>
+<%= label_tag(:all_keys, "Select All Keys") %>
+<% if @random && @random == "T"  %>
+    <%= check_box_tag(:all_randomize, "all_randomize", true) %>
+  <% else %>
+    <%= check_box_tag(:all_randomize, "all_randomize") %>
+<% end %>
+  <%= label_tag(:all_randomize, "Randomize Flash Cards") %>
+<hr>
+<div class='row'>
+  <h2 class="mode-heading"><strong>Major</strong></h2>
+  <% @keynotes.each do |keynote| %>
+    <% if keynote.mode == 'Major' %>
+      <div class='col-md-3'>
+        <% if @id_array && @id_array.include?(keynote.id.to_s) %>
+          <%= check_box_tag("#{keynote.id}".to_sym, '', true) %>
+        <% else %>
+          <%= check_box_tag("#{keynote.id}".to_sym) %>
+        <% end %>
+        <%= label_tag(("#{keynote.id}".to_sym), keynote.keynote) %>
+      </div>
     <% end %>
-      <%= label_tag(:all_randomize, "Randomize Flash Cards") %>
-    <hr>
-    <div class='row'>
-      <h2 class="mode-heading"><strong>Major</strong></h2>
-      <% @keynotes.each do |keynote| %>
-        <% if keynote.mode == 'Major' %>
-          <div class='col-md-3'>
-            <% if @id_array && @id_array.include?(keynote.id.to_s) %>
-              <%= check_box_tag("#{keynote.id}".to_sym, '', true) %>
-            <% else %>
-              <%= check_box_tag("#{keynote.id}".to_sym) %>
-            <% end %>
-            <%= label_tag(("#{keynote.id}".to_sym), keynote.keynote) %>
-          </div>
-        <% end %>
-      <% end %>
+  <% end %>
+  <div class='col-md-3'>
+    <%= check_box_tag(:all_major, "all_major") %>
+    <%= label_tag(:all_major, "Select All", class:"select-all") %>
+  </div>
+</div>
+<hr>
+<div class='row'>
+  <h2 class="mode-heading"><strong>Minor</strong></h2>
+  <% @keynotes.each do |keynote| %>
+    <% if keynote.mode == 'minor' %>
       <div class='col-md-3'>
-        <%= check_box_tag(:all_major, "all_major") %>
-        <%= label_tag(:all_major, "Select All", class:"select-all") %>
-      </div>
-    </div>
-    <hr>
-    <div class='row'>
-      <h2 class="mode-heading"><strong>Minor</strong></h2>
-      <% @keynotes.each do |keynote| %>
-        <% if keynote.mode == 'minor' %>
-          <div class='col-md-3'>
-            <% if @id_array && @id_array.include?(keynote.id.to_s) %>
-              <%= check_box_tag("#{keynote.id}".to_sym, '', true) %>
-            <% else %>
-              <%= check_box_tag("#{keynote.id}".to_sym) %>
-            <% end %>
-            <%= label_tag(("#{keynote.id}".to_sym), keynote.keynote) %>
-          </div>
+        <% if @id_array && @id_array.include?(keynote.id.to_s) %>
+          <%= check_box_tag("#{keynote.id}".to_sym, '', true) %>
+        <% else %>
+          <%= check_box_tag("#{keynote.id}".to_sym) %>
         <% end %>
-      <% end %>
-      <div class='col-md-3'>
-        <%= check_box_tag(:all_minor, "all_minor") %>
-        <%= label_tag(:all_minor, "Select All", class:"select-all") %>
+        <%= label_tag(("#{keynote.id}".to_sym), keynote.keynote) %>
       </div>
-    </div>
-    <hr>
+    <% end %>
+  <% end %>
+  <div class='col-md-3'>
+    <%= check_box_tag(:all_minor, "all_minor") %>
+    <%= label_tag(:all_minor, "Select All", class:"select-all") %>
+  </div>
+</div>
+<hr>
