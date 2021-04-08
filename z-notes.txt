@@ -85,3 +85,24 @@ majchords.unique
 
 <%# check_box_tag name, value, true
 check_box_tag name, value, {:checked => "checked"}  %>
+
+<h1><%= @card_set.set_name %></h1>
+<h2>Keys:</h2>
+<% if @keynotes_array.any? %>
+  <% @keynotes_array.each do |keynote| %>
+    <%= "#{keynote.keynote} #{keynote.mode}" %><br>
+  <% end %>
+<% else %>
+  <p>There are no keys saved to this set.</p>
+<% end %>
+
+<a href="#" class="btn">Go to flash cards</a>
+
+<footer class="footer">
+  <p>©2021 Piano Pals</p>
+    <p>
+    <a href="https://github.com/mekinsie">Mekinsie Callahan</a> |
+    <a href="https://github.com/MicahOlson">Micah Olson</a> |
+    <a href="https://github.com/CrankyJones">Geof Rosenmund</a>
+  </p>
+</footer>

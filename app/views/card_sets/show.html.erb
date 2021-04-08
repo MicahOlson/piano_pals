@@ -1,16 +1,70 @@
-<h1><%= @card_set.set_name %></h1>
-<h2>Keys:</h2>
-<% if @keynotes_array.any? %>
-  <% @keynotes_array.each do |keynote| %>
-    <%= "#{keynote.keynote} #{keynote.mode}" %><br>
+
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <% @display_keys.length.times do |i| %>
+      <li data-target="#carousel-example-generic" data-slide-to=<% i.to_s %>></li>
+    <% end %>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front" style="padding-top: 120px">
+            <h1>F L A S H   C H O R D S</h1>
+            <p>Click either arrows to navigate between cards</p>
+            <p>Hover your mouse over the card to flip it</p>
+          </div>
+          <div class="flip-card-back" style="padding-top: 40px">
+            <p> Finger positions and audio samples are on the backs of each card </p>
+            <%= image_tag "/assets/major/a-flat-maj.png" %>
+            <%= audio_tag("/audios/major/a-flat-maj.mp3", controls: true) %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <% if @display_keys %>
+    <% if @random == 'T' %>
+      <% @display_keys.shuffle! %>
+    <% end %>
+    <% @display_keys.each do |keynote| %>
+      <div class="item">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h1><%= "#{keynote.keynote} #{keynote.mode}" %></h1>
+            </div>
+            <div class="flip-card-back">
+              <%= image_tag "/assets/#{keynote.mode.downcase}/#{keynote.image}" %>
+              <%= audio_tag("/audios/#{keynote.mode.downcase}/#{keynote.audio}", controls: true)%>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
   <% end %>
-<% else %>
-  <p>There are no keys saved to this set.</p>
-<% end %>
+  </div>
 
-<a href="#" class="btn">Go to flash cards</a>
 
-<footer class="footer">
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+  <div class="push-btn">
+      <%= link_to "Back", "/card_sets", class:"back-btn" %>
+  </div>
+</div>
+<footer>
   <p>©2021 Piano Pals</p>
     <p>
     <a href="https://github.com/mekinsie">Mekinsie Callahan</a> |

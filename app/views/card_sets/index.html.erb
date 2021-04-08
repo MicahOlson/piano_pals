@@ -1,16 +1,19 @@
 <h1> Your card sets:</h1>
-<% if @card_sets.any? %>
-  <% @card_sets.each do |card_set| %>
-  <p>
-    <%= card_set.set_name %> =>
-    <%= link_to "Edit", edit_card_set_path(card_set.id) %> |
-    <%= link_to "Go Flashcards", cards_path(@display_keys) %>
-  </p>
+  <% if @card_array.any? %>
+    <% @card_array.each do |card_set| %>
+    <%# <p> %>
+      <div class="cardsets">
+        <%= link_to card_set.set_name, edit_card_set_path(card_set.id) %>
+      </div>
+
+      <%= link_to "Go to Flashcards", card_set_path(card_set.id), class:"card-btn"%>
+
+    <%# </p> %>
+    <% end %>
+  <% else %>
+    <p>You do not currently have any sets.</p>
   <% end %>
-<% else %>
-  <p>You do not currently have any sets.</p>
-<% end %>
-<br>
+  <br>
 
 <%= link_to "Create new card set", new_card_set_path %>
 

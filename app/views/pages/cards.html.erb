@@ -35,7 +35,7 @@
 
 
   <% if @display_keys %>
-    <% if @selected_keys.include?('all_randomize') %>
+    <% if @random == 'T' %>
       <% @display_keys.shuffle! %>
     <% end %>
     <% @display_keys.each do |keynote| %>
