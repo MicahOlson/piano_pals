@@ -1,18 +1,12 @@
 <img src="/assets/logo.png" height="150" alt="logo" id="logo">
 <div class="center-text">
 <hr>
-  <p>Practice learning piano chords with our flashcard tool. You can customize your flashcard set to any chords you want.</p>
-<%# 
-  <p>To customize your flashcards, click "Setup Flashcards" to get started.</p> %>
-  <%# <br>
-  <h2><strong>Something Cool or yeah</strong></h2>
-  <p>kjsdhgdksjfhgdfksjg</p> %>
+  <p>Practice learning piano chords with our flashcard tool. Sign in to create and customize your own flashcard sets.</p>
 </div>
 
 <div class="options">
   <span class="btn"><%= link_to "Setup Flashcards", "/setup" %></span>
 </div>
-
 
 <h2 class="center-text" style="margin-top: 80px"><strong> P R E V I E W </strong></h2>
   <% randumber = rand(1..Keynote.all.length) %>
@@ -28,6 +22,7 @@
           </div>
         </div>
       </div>  
+
 <div id="home-footer" class="center-text">
   <p>©2021 Piano Pals</p>
   <p>
