@@ -1,0 +1,38 @@
+
+    <%= check_box_tag(:all_keys, "all_keys") %>
+    <%= label_tag(:all_keys, "Select All Keys") %>
+    <%= check_box_tag(:all_randomize, "all_randomize") %>
+    <%= label_tag(:all_randomize, "Randomize Flash Cards") %>
+    <hr>
+    <div class='row'>
+      <h2 class="mode-heading"><strong>Major</strong></h2>
+      <% @keynotes.each do |keynote| %>
+        <% if keynote.mode == 'Major' %>
+          <div class='col-md-3'>
+            <%= check_box_tag("#{keynote.id}".to_sym, "#{keynote.keynote} #{keynote.mode}") %>
+            <%= label_tag(("#{keynote.id}".to_sym), keynote.keynote) %>
+          </div>
+        <% end %>
+      <% end %>
+      <div class='col-md-3'>
+        <%= check_box_tag(:all_major, "all_major") %>
+        <%= label_tag(:all_major, "Select All", class:"select-all") %>
+      </div>
+    </div>
+    <hr>
+    <div class='row'>
+      <h2 class="mode-heading"><strong>Minor</strong></h2>
+      <% @keynotes.each do |keynote| %>
+        <% if keynote.mode == 'minor' %>
+          <div class='col-md-3'>
+            <%= check_box_tag("#{keynote.id}".to_sym, "#{keynote.keynote} #{keynote.mode}") %>
+            <%= label_tag("#{keynote.id}".to_sym, keynote.keynote) %>
+          </div>
+        <% end %>
+      <% end %>
+      <div class='col-md-3'>
+        <%= check_box_tag(:all_minor, "all_minor") %>
+        <%= label_tag(:all_minor, "Select All", class:"select-all") %>
+      </div>
+    </div>
+    <hr>

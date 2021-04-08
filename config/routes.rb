@@ -1,14 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users do
-    resources :card_sets
-  end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: 'pages#home'
-
-  get '/setup', to: 'pages#setup'
-  # match '/cards' => 'pages#cards', via: :post
-  # match '/cards' => 'pages#cards', via: :get
-  get '/cards', to: 'pages#cards'
+  devise_for :users
   resources :keynotes
-
+  resources :card_sets
+  root to: 'pages#home'
+  get '/setup', to: 'pages#setup'
+  get '/cards', to: 'pages#cards'
 end

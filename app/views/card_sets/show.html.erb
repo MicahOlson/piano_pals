@@ -1,12 +1,16 @@
-<div style= "margin-top: 40px;">
-  <p>Select which keys you would like flash cards for:</p>
+<h1><%= @card_set.set_name %> </h1>
 
-    <%= form_tag cards_path, :method => 'get' do %>
-    <%= render "layouts/card_sets_form"%>
-    <%= submit_tag "Create Flashcards", class: "btn" %>
+<h2>Keys:</h2>
+<% if @keynotes_array.any? %>
+  <% @keynotes_array.each do |keynote| %>
+    <%= "#{keynote.keynote} #{keynote.mode}" %><br>
   <% end %>
-  </div>
-</div>
+<% else %>
+  <p>There are no keys saved to this set.</p>
+<% end %>
+
+
+<>
 
 <footer class="footer">
   <p>©2021 Piano Pals</p>

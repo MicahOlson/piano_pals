@@ -1,13 +1,18 @@
 <div style= "margin-top: 40px;">
-  <p>Select which keys you would like flash cards for:</p>
-
-    <%= form_tag cards_path, :method => 'get' do %>
-    <%= render "layouts/card_sets_form"%>
-    <%= submit_tag "Create Flashcards", class: "btn" %>
-  <% end %>
+  <h1> Create a new card set</h1>
+  <%= form_tag '/card_sets', :method => 'post' do %>
+  <%= render "layouts/card_sets_form"%>
+    <%= label_tag(:set_name, "Set Name:") %>
+    <%= text_field_tag(:set_name) %>
+    <hr>
+    <%= submit_tag "Save Set", class: "btn" %>
+    <% end %>
   </div>
 </div>
 
+
+
+</div>
 <footer class="footer">
   <p>©2021 Piano Pals</p>
     <p>

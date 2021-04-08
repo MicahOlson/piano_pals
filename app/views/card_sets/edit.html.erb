@@ -1,0 +1,26 @@
+<div style= "margin-top: 40px;">
+<h1> Edit Card Set</h1>
+  <%= form_tag edit_card_set_path, :method => 'post' do %>
+
+<%= render "layouts/card_sets_form"%>
+
+<%= submit_tag "Edit Set", class: "btn" %>
+  <% end %>
+  </div>
+</div>
+
+<%if @card_set.id %>
+  <p><%= link_to "Delete Card Set", card_set_path(@card_set),
+                        :data => {:confirm => "Are you sure?",
+                                       :method => "delete"} %></p>
+<% end %>
+
+
+<footer class="footer">
+  <p>©2021 Piano Pals</p>
+    <p>
+    <a href="https://github.com/mekinsie">Mekinsie Callahan</a> |
+    <a href="https://github.com/MicahOlson">Micah Olson</a> |
+    <a href="https://github.com/CrankyJones">Geof Rosenmund</a>
+  </p>
+</footer>

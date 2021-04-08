@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_07_222111) do
+ActiveRecord::Schema.define(version: 2021_04_07_225443) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2021_04_07_222111) do
   create_table "card_sets", force: :cascade do |t|
     t.string "set"
     t.integer "user_id"
+    t.string "set_name"
   end
 
   create_table "keynotes", force: :cascade do |t|

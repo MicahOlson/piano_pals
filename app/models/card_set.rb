@@ -1,4 +1,5 @@
 class CardSet < ApplicationRecord
   belongs_to :user
-  validates :card_set, :presence => true
+  validates :set, :presence => true
+  validates :set_name, :presence => true
 end
