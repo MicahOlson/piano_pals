@@ -1,21 +1,15 @@
-<h1> Your card sets:</h1>
+<span class="center-text"><h1> Your card sets:</h1></span>
   <% if @card_array.any? %>
     <% @card_array.each do |card_set| %>
-    <%# <p> %>
-      <div class="cardsets">
-        <%= link_to card_set.set_name, edit_card_set_path(card_set.id) %>
-      </div>
-
+      <span class="center-text"><h2><%= link_to card_set.set_name, edit_card_set_path(card_set.id) %></h2></span>
       <%= link_to "Go to Flashcards", card_set_path(card_set.id), class:"card-btn"%>
-
-    <%# </p> %>
     <% end %>
   <% else %>
     <p>You do not currently have any sets.</p>
   <% end %>
   <br>
 
-<%= link_to "Create new card set", new_card_set_path %>
+<%= link_to "Create new card set", new_card_set_path, class:"btn" %>
 
 <footer class="footer">
   <p>©2021 Piano Pals</p>

@@ -58,29 +58,39 @@ body {
 .card-btn {
   background-color: rgb(48, 48, 48);
   color: rgb(230, 230, 230);
-  font-family: 'Abril Fatface', cursive;
+  font-family: 'Open Sans', sans-serif;
   border-radius: 15px;
-  // margin-top: 30px;
-  // margin-bottom: 30px;
-  width: 300px;
-  font-size: 15px;
-  padding: 10px;
+  width: 130px;
+  font-size: 12px;
+  padding: 8px;
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  text-align: center;
   &:hover {
     background-color: rgb(168, 168, 168);
+    color: black;
   }
 }
-.cardsets {
-font-size: 30px;
-background-color: rgb(34, 34, 34);
-padding: 20px;
-width: 300px;
-text-align: center;
-border-radius: 15px;
-&:hover {
-  background-color: rgb(168, 168, 168);
-  text-decoration: none;
-}
-}
+
+
+// .cardsets {
+// font-size: 30px;
+// background-color: rgb(34, 34, 34);
+// padding: 10px;
+// width: 300px;
+// text-align: center;
+// border-radius: 15px;
+// color: white;
+// border: none;
+//   &:hover {
+//     background-color: rgb(168, 168, 168);
+//     text-decoration: none;
+//     color: black;
+//   }
+// }
 
 .carousel-inner {
   margin-top: 50px;
