@@ -1,4 +1,6 @@
-# Flash Chords
+<div align="center">
+  <img src="public/logo_readme.png" alt="Flash Chords logo">
+</div>
 
 ### Authored by: Mekinsie Callahan, Micah Olson, Geof Rosenmund
 
@@ -43,11 +45,11 @@ Heroku: https://blooming-gorge-72399.herokuapp.com/
 * * * 
 
 ## Installation Instructions
-1. Navigate to the desired directory where you would like to clone the project to.
+1. Navigate to the desired directory where you would like to clone the project.
 
 2. Once you have chosen your desired directory, clone the github repo using the version control tool `git` (<a href="https://www.learnhowtoprogram.com/introduction-to-programming/getting-started-with-intro-to-programming/git-and-github">download instructions</a>). Type the following command into your terminal:
 ```bash
-$ git clone https://github.com/CrankyJones/piano_pals.git
+$ git clone https://github.com/MicahOlson/piano_pals.git
 ```
 3. Open the project in VSCode by typing the following in your terminal:
 
@@ -56,7 +58,7 @@ $ code .
 ```
 _**Note:** VSCode is a code editing software. If you don't already have it, you can download it <a href="https://code.visualstudio.com/">here</a>_
 
-4. While located in the root directy, install gem bundler by typing:
+4. While located in the root directory, install gem bundler by typing:
 
 ``` bash
 $ gem install bundler
@@ -91,7 +93,7 @@ $ rspec
 * * *
 ## Database Layout:
 
-![Database Layout](/piano_pals_schema.PNG)
+![Database Layout](/public/db_schema.png)
 
 * * * 
 ## License
