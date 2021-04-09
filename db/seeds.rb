@@ -1,5 +1,3 @@
-require 'faker'
-
 Keynote.destroy_all
 
 chords = [

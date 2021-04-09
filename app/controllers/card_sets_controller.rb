@@ -1,5 +1,4 @@
 class CardSetsController < ApplicationController
-
   before_action :only => [:edit, :delete] do
     if @card_set = CardSet.where(id: params[:id]).first
     unless current_user && @card_set.user_id == current_user.id
@@ -11,7 +10,6 @@ class CardSetsController < ApplicationController
         redirect_to root_path
     end
   end
-
 
   def index
     @card_array = []

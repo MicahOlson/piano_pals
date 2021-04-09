@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "C:/Users/assbu/Desktop/piano_pals/spec/models/keynote_spec.rb": {
+      "/Users/Micah/projects/piano_pals/spec/models/keynote_spec.rb": {
         "lines": [
           1,
           null,
@@ -10,11 +10,10 @@
           2,
           2,
           2,
-          null,
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/spec/rails_helper.rb": {
+      "/Users/Micah/projects/piano_pals/spec/rails_helper.rb": {
         "lines": [
           null,
           1,
@@ -81,7 +80,6 @@
           null,
           null,
           null,
-          null,
           1,
           1,
           1,
@@ -90,7 +88,7 @@
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/config/environment.rb": {
+      "/Users/Micah/projects/piano_pals/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -99,7 +97,7 @@
           1
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/config/application.rb": {
+      "/Users/Micah/projects/piano_pals/config/application.rb": {
         "lines": [
           1,
           null,
@@ -136,7 +134,7 @@
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/config/boot.rb": {
+      "/Users/Micah/projects/piano_pals/config/boot.rb": {
         "lines": [
           1,
           null,
@@ -144,7 +142,7 @@
           1
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/config/environments/test.rb": {
+      "/Users/Micah/projects/piano_pals/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -194,7 +192,7 @@
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/config/initializers/application_controller_renderer.rb": {
+      "/Users/Micah/projects/piano_pals/config/initializers/application_controller_renderer.rb": {
         "lines": [
           null,
           null,
@@ -206,7 +204,7 @@
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/config/initializers/assets.rb": {
+      "/Users/Micah/projects/piano_pals/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -224,7 +222,7 @@
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/config/initializers/backtrace_silencers.rb": {
+      "/Users/Micah/projects/piano_pals/config/initializers/backtrace_silencers.rb": {
         "lines": [
           null,
           null,
@@ -235,7 +233,7 @@
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/config/initializers/content_security_policy.rb": {
+      "/Users/Micah/projects/piano_pals/config/initializers/content_security_policy.rb": {
         "lines": [
           null,
           null,
@@ -264,7 +262,7 @@
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/config/initializers/cookies_serializer.rb": {
+      "/Users/Micah/projects/piano_pals/config/initializers/cookies_serializer.rb": {
         "lines": [
           null,
           null,
@@ -273,7 +271,7 @@
           1
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/config/initializers/devise.rb": {
+      "/Users/Micah/projects/piano_pals/config/initializers/devise.rb": {
         "lines": [
           null,
           null,
@@ -588,7 +586,7 @@
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/config/initializers/filter_parameter_logging.rb": {
+      "/Users/Micah/projects/piano_pals/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -596,7 +594,7 @@
           1
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/config/initializers/inflections.rb": {
+      "/Users/Micah/projects/piano_pals/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -616,7 +614,7 @@
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/config/initializers/mime_types.rb": {
+      "/Users/Micah/projects/piano_pals/config/initializers/mime_types.rb": {
         "lines": [
           null,
           null,
@@ -624,7 +622,7 @@
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/config/initializers/wrap_parameters.rb": {
+      "/Users/Micah/projects/piano_pals/config/initializers/wrap_parameters.rb": {
         "lines": [
           null,
           null,
@@ -642,7 +640,7 @@
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/config/routes.rb": {
+      "/Users/Micah/projects/piano_pals/config/routes.rb": {
         "lines": [
           1,
           1,
@@ -654,12 +652,9 @@
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/app/models/user.rb": {
+      "/Users/Micah/projects/piano_pals/app/models/user.rb": {
         "lines": [
           1,
-          null,
-          null,
-          null,
           1,
           1,
           null,
@@ -674,14 +669,14 @@
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/app/models/application_record.rb": {
+      "/Users/Micah/projects/piano_pals/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/app/controllers/application_controller.rb": {
+      "/Users/Micah/projects/piano_pals/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -693,13 +688,13 @@
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/app/helpers/application_helper.rb": {
+      "/Users/Micah/projects/piano_pals/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/app/helpers/carousel_helper.rb": {
+      "/Users/Micah/projects/piano_pals/app/helpers/carousel_helper.rb": {
         "lines": [
           1,
           1,
@@ -769,15 +764,7 @@
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/app/channels/application_cable/channel.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "C:/Users/assbu/Desktop/piano_pals/app/channels/application_cable/connection.rb": {
+      "/Users/Micah/projects/piano_pals/app/channels/application_cable/channel.rb": {
         "lines": [
           1,
           1,
@@ -785,10 +772,17 @@
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/app/controllers/card_sets_controller.rb": {
+      "/Users/Micah/projects/piano_pals/app/channels/application_cable/connection.rb": {
         "lines": [
           1,
+          1,
           null,
+          null
+        ]
+      },
+      "/Users/Micah/projects/piano_pals/app/controllers/card_sets_controller.rb": {
+        "lines": [
+          1,
           1,
           0,
           0,
@@ -870,8 +864,6 @@
           0,
           0,
           0,
-          null,
-          null,
           0,
           null,
           null,
@@ -924,10 +916,9 @@
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/app/controllers/pages_controller.rb": {
+      "/Users/Micah/projects/piano_pals/app/controllers/pages_controller.rb": {
         "lines": [
           1,
-          null,
           1,
           0,
           null,
@@ -968,32 +959,22 @@
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/app/jobs/application_job.rb": {
+      "/Users/Micah/projects/piano_pals/app/jobs/application_job.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/app/mailers/application_mailer.rb": {
+      "/Users/Micah/projects/piano_pals/app/mailers/application_mailer.rb": {
         "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
-      "C:/Users/assbu/Desktop/piano_pals/app/models/card_set.rb": {
-        "lines": [
-          1,
           1,
           1,
           1,
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/app/models/keynote.rb": {
+      "/Users/Micah/projects/piano_pals/app/models/card_set.rb": {
         "lines": [
-          1,
           1,
           1,
           1,
@@ -1001,7 +982,17 @@
           null
         ]
       },
-      "C:/Users/assbu/Desktop/piano_pals/spec/models/user_spec.rb": {
+      "/Users/Micah/projects/piano_pals/app/models/keynote.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/Micah/projects/piano_pals/spec/models/user_spec.rb": {
         "lines": [
           1,
           null,
@@ -1016,6 +1007,6 @@
         ]
       }
     },
-    "timestamp": 1617922249
+    "timestamp": 1617993100
   }
 }
