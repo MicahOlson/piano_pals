@@ -34,6 +34,14 @@ Flash Chords is a web application where you can learn piano chords through the u
 
 * * *
 
+
+## Heroku Deployment
+
+Use this link to immediately have access to a working site.   
+Heroku: https://blooming-gorge-72399.herokuapp.com/
+
+* * * 
+
 ## Installation Instructions
 1. Navigate to the desired directory where you would like to clone the project to.
 
