@@ -1,6 +1,4 @@
-<div align="center">
-  <img src="public/logo_readme.png" alt="Flash Chords logo">
-</div>
+![](/public/logo_readme.png)
 
 ### Authored by: Mekinsie Callahan, Micah Olson, Geof Rosenmund
 
@@ -36,11 +34,10 @@ Flash Chords is a web application where you can learn piano chords through the u
 
 * * *
 
-
 ## Heroku Deployment
 
 Use this link to immediately have access to a working site.   
-Heroku: https://blooming-gorge-72399.herokuapp.com/
+Heroku: https://flash-chords.herokuapp.com/
 
 * * * 
 
